@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orange Berries TV | Magical Songs, Gentle Lullabies & Fun Bedtime Friends</title>
+  <meta name="description" content="Welcome to Orange Berries TV! A cheerful, soothing wonderland where kids, toddlers, and babies discover delightful songs, meet cute bedtime characters, and drift peacefully to sleep.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Cute & Playful Google Fonts: Fredoka & Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Fredoka', 'cursive', 'sans-serif'],
+            body: ['Quicksand', 'sans-serif'],
+          },
+          colors: {
+            berry: {
+              orange: '#FF7A00',
+              orangeLight: '#FF9E40',
+              yellow: '#FFC83B',
+              sky: '#38BDF8',
+              skyLight: '#BAE6FD',
+              purple: '#A855F7',
+              pink: '#F472B6',
+              mint: '#34D399',
+              dark: '#1E293B',
+              cream: '#FFFBEB',
+            }
+          },
+          boxShadow: {
+            'bubbly': '0 12px 0 0 rgba(255, 122, 0, 0.25), 0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+            'card-pop': '0 10px 0 0 rgba(226, 232, 240, 0.8), 0 20px 25px -5px rgba(0, 0, 0, 0.05)',
+            'btn-pop': '0 6px 0 0 #D96200',
+            'btn-pop-sky': '0 6px 0 0 #0284C7',
+            'btn-pop-pink': '0 6px 0 0 #DB2777',
+          },
+          animation: {
+            'float-slow': 'float 5s ease-in-out infinite',
+            'float-gentle': 'floatGentle 4s ease-in-out infinite',
+            'wiggle': 'wiggle 2s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-14px) rotate(2deg)' },
+            },
+            floatGentle: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            wiggle: {
+              '0%, 100%': { transform: 'rotate(-3deg)' },
+              '50%': { transform: 'rotate(3deg)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+              '50%': { opacity: '1', transform: 'scale(1.05)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #F0F9FF;
+      background-image: 
+        radial-gradient(#BAE6FD 1.2px, transparent 1.2px), 
+        radial-gradient(#FDE68A 1.2px, #F0F9FF 1.2px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+    }
+    .font-heading {
+      font-family: 'Fredoka', cursive, sans-serif;
+    }
+    /* Playful scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F0F9FF;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #FF9E40;
+      border-radius: 999px;
+      border: 3px solid #F0F9FF;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF7A00;
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-amber-300 selection:text-orange-950">
+
+  <!-- TOP DECORATIVE CLOUDS & ANNOUNCEMENT -->
+  <div class="bg-gradient-to-r from-amber-400 via-orange-400 to-pink-400 text-white py-2 px-4 text-center text-xs sm:text-sm font-bold tracking-wide shadow-sm flex items-center justify-center gap-2">
+    <span class="animate-bounce">🌟</span>
+    <span>Welcome to Orange Berries TV • Pure Instrumental Sleep Music & Joyful Bedtime Stories for Little Dreamers!</span>
+    <span class="animate-bounce">🌙</span>
+  </div>
+
+  <!-- FLOATING NAVIGATION BAR (Lalafun Inspired Rounded Island) -->
+  <nav class="sticky top-4 z-50 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="bg-white/95 backdrop-blur-md border-4 border-amber-200 rounded-full px-4 sm:px-6 py-2.5 shadow-xl flex items-center justify-between gap-3 transition-all hover:border-orange-300">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/logo.png" alt="Orange Berries TV Logo" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-orange-400 object-cover shadow-sm group-hover:rotate-6 transition-transform duration-300">
+        <div class="flex flex-col">
+          <span class="font-heading font-black text-lg sm:text-xl text-orange-500 tracking-tight leading-none group-hover:text-orange-600 transition-colors">
+            Orange Berries <span class="text-sky-500">TV</span>
+          </span>
+          <span class="text-[10px] sm:text-[11px] font-bold text-amber-500 tracking-wider uppercase">Lullabies &amp; Kids Fun</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <div class="hidden md:flex items-center gap-1.5 font-heading font-semibold text-sm">
+        <a href="#about" class="px-3.5 py-1.5 rounded-full text-slate-600 hover:text-orange-500 hover:bg-orange-50 transition-all flex items-center gap-1.5">
+          <span>✨</span> About Us
+        </a>
+        <a href="#characters" class="px-4 py-1.5 rounded-full bg-amber-100 text-orange-700 hover:bg-orange-200 transition-all flex items-center gap-1.5 font-bold shadow-xs border border-amber-300">
+          <span>🧸</span> Meet Our Friends
+        </a>
+        <a href="#music" class="px-3.5 py-1.5 rounded-full text-slate-600 hover:text-sky-500 hover:bg-sky-50 transition-all flex items-center gap-1.5">
+          <span>🎵</span> Sleep Music
+        </a>
+        <a href="#socials" class="px-3.5 py-1.5 rounded-full text-slate-600 hover:text-purple-600 hover:bg-purple-50 transition-all flex items-center gap-1.5">
+          <span>📱</span> Follow Us
+        </a>
+        <a href="privacy.html" class="px-3.5 py-1.5 rounded-full text-slate-500 hover:text-emerald-600 hover:bg-emerald-50 transition-all flex items-center gap-1">
+          <span>🛡️</span> Privacy
+        </a>
+      </div>
+
+      <!-- Quick YouTube CTA Pill -->
+      <a href="https://www.youtube.com/@OrangeBerriesTV" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2 rounded-full bg-rose-500 hover:bg-rose-600 text-white font-heading font-bold text-xs sm:text-sm shadow-btn-pop transition-all transform active:translate-y-1 active:shadow-none flex items-center gap-1.5">
+        <span class="text-base">▶</span> <span>Watch Video</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION WITH KIDS-FRIENDLY WARM BANNER -->
+  <header class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-14 text-center relative overflow-hidden">
+    
+    <!-- Floating Background Playful Badges -->
+    <div class="absolute -top-4 left-6 hidden lg:block animate-float-slow text-4xl select-none opacity-80">🎈</div>
+    <div class="absolute top-16 right-10 hidden lg:block animate-float-gentle text-4xl select-none opacity-80">⭐</div>
+    <div class="absolute bottom-12 left-12 hidden lg:block animate-wiggle text-4xl select-none opacity-80">🧸</div>
+    <div class="absolute bottom-20 right-16 hidden lg:block animate-float-slow text-4xl select-none opacity-80">🍭</div>
+
+    <!-- Friendly Pill Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border-2 border-amber-300 text-orange-600 font-heading font-bold text-xs sm:text-sm shadow-sm mb-5">
+      <span class="text-base">🌙</span> A Magical Bedtime World for Babies &amp; Toddlers
+    </div>
+
+    <!-- Main Title with Bubbly Contrast -->
+    <h1 class="font-heading font-black text-3xl sm:text-5xl md:text-6xl text-slate-800 tracking-tight leading-tight max-w-4xl mx-auto">
+      Sing, Dream, &amp; Sleep with <br class="hidden sm:inline">
+      <span class="text-orange-500 underline decoration-wavy decoration-amber-300">Orange Berries TV</span>! 🍊✨
+    </h1>
+
+    <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed">
+      Delightful acoustic nursery lullabies, relaxing bedtime piano songs, and sweet animated friends designed to comfort toddlers, infants, and exhausted parents every night.
+    </p>
+
+    <!-- Call to Actions -->
+	<!--
+    <div class="mt-7 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+      <a href="#characters" class="px-6 py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-heading font-bold text-sm sm:text-base shadow-btn-pop transition-all transform active:translate-y-1 active:shadow-none flex items-center gap-2">
+        <span>🧸</span> Meet Our Friends!
+      </a>
+      <a href="https://www.youtube.com/@OrangeBerriesTV" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-full bg-sky-400 hover:bg-sky-500 text-white font-heading font-bold text-sm sm:text-base shadow-btn-pop-sky transition-all transform active:translate-y-1 active:shadow-none flex items-center gap-2">
+        <span>🎵</span> Listen on YouTube
+      </a>
+      <a href="https://www.pinterest.com/orangeberriestv/" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-full bg-rose-500 hover:bg-rose-600 text-white font-heading font-bold text-sm sm:text-base shadow-btn-pop-pink transition-all transform active:translate-y-1 active:shadow-none flex items-center gap-2">
+        <span>📌</span> Pinterest Ideas
+      </a>
+    </div>
+	-->
+
+    <!-- WIDE PLAYFUL BANNER DISPLAY WITH ROUNDED BORDER -->
+    <div class="mt-10 sm:mt-12 relative max-w-5xl mx-auto group">
+      <div class="absolute -inset-2 bg-gradient-to-r from-orange-400 via-pink-400 to-sky-400 rounded-3xl sm:rounded-[36px] blur-md opacity-40 group-hover:opacity-70 transition duration-500"></div>
+      <div class="relative bg-white p-2.5 sm:p-3 rounded-2xl sm:rounded-[32px] border-4 border-amber-300 shadow-2xl overflow-hidden">
+        <img src="assets/images/banner.png" alt="Orange Berries TV Bedtime Friends Banner" class="w-full h-auto rounded-xl sm:rounded-[26px] object-cover transition-transform duration-700 group-hover:scale-[1.01]">
+        
+        <!-- Floating Corner Badge -->
+        <div class="absolute bottom-5 right-5 sm:bottom-7 sm:right-7 bg-white/95 backdrop-blur-xs border-2 border-orange-400 rounded-2xl px-3.5 py-1.5 shadow-lg flex items-center gap-2">
+          <span class="text-xl">💤</span>
+          <span class="font-heading font-bold text-xs sm:text-sm text-orange-600">Pure Peaceful Sleep</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SOCIAL MEDIA COMMUNITY QUICK BAR -->
+  <section id="socials" class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+    <div class="bg-gradient-to-r from-amber-100 via-orange-100 to-pink-100 border-4 border-white rounded-3xl p-6 shadow-card-pop flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-4 text-center md:text-left">
+        <div class="w-14 h-14 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-3xl shadow-md rotate-3 shrink-0">
+          🎉
+        </div>
+        <div>
+          <h3 class="font-heading font-bold text-lg sm:text-xl text-slate-800">Make Bedtime Peaceful &amp; Stress-Free!</h3>
+          <p class="text-xs sm:text-sm text-slate-600">Join our growing family across social media to discover comforting lullabies, cute bedtime clips, and the perfect sleep soundtrack for your little ones!</p>
+        </div>
+      </div>
+
+      <!-- Social Media Buttons -->
+      <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap justify-center">
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@OrangeBerriesTV" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl bg-white hover:bg-rose-50 border-2 border-rose-300 text-rose-600 font-heading font-bold text-xs sm:text-sm shadow-sm hover:scale-105 transition-all flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current text-rose-600" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>YouTube</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/orangeberriestv/" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl bg-white hover:bg-pink-50 border-2 border-pink-300 text-pink-600 font-heading font-bold text-xs sm:text-sm shadow-sm hover:scale-105 transition-all flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current text-pink-600" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span>Instagram</span>
+        </a>
+
+        <!-- Pinterest -->
+        <a href="https://www.pinterest.com/orangeberriestv/" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl bg-white hover:bg-red-50 border-2 border-red-300 text-red-600 font-heading font-bold text-xs sm:text-sm shadow-sm hover:scale-105 transition-all flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current text-red-600" viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-4.37 23.18c-.07-.94-.13-2.38.03-3.41.14-.95 1-4.24 1-4.24s-.26-.51-.26-1.27c0-1.19.69-2.08 1.55-2.08.73 0 1.08.55 1.08 1.21 0 .74-.47 1.84-.71 2.87-.2.86.43 1.56 1.28 1.56 1.53 0 2.72-1.62 2.72-3.95 0-2.07-1.48-3.51-3.6-3.51-2.45 0-3.89 1.84-3.89 3.73 0 .74.29 1.54.64 1.97a.34.34 0 0 1 .08.33c-.09.37-.29 1.18-.33 1.35-.05.22-.17.26-.39.16-1.46-.68-2.37-2.82-2.37-4.53 0-3.69 2.68-7.08 7.73-7.08 4.06 0 7.22 2.89 7.22 6.76 0 4.03-2.54 7.28-6.07 7.28-1.19 0-2.3-.62-2.68-1.35l-.73 2.79c-.27 1.02-.99 2.3-1.47 3.08A12 12 0 1 0 12 0z"/></svg>
+          <span>Pinterest</span>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://web.facebook.com/orangeberriestv" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-2xl bg-white hover:bg-blue-50 border-2 border-blue-300 text-blue-600 font-heading font-bold text-xs sm:text-sm shadow-sm hover:scale-105 transition-all flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current text-blue-600" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARACTERS SHOWCASE SECTION (Lalafun Style Character Cards) -->
+  <section id="characters" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 scroll-mt-20">
+    
+    <!-- Section Header -->
+    <div class="text-center space-y-3 mb-12">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-100 text-orange-700 font-heading font-bold text-xs border border-orange-300">
+        <span>🧸</span> Meet the Crew
+      </div>
+      <h2 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-slate-800 tracking-tight">
+        Our Adorable Bedtime Characters!
+      </h2>
+      <p class="text-slate-600 max-w-xl mx-auto text-sm sm:text-base font-medium">
+        Every friend brings a special dose of joy, calm, and wonder to make bedtime stories magical and sweet.
+      </p>
+    </div>
+
+    <!-- Character Cards Grid (7 Characters) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+      <!-- 1. Banjo -->
+      <div class="bg-white rounded-3xl p-5 border-4 border-amber-200 shadow-card-pop hover:border-orange-400 hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+        <div class="w-full aspect-square bg-gradient-to-tr from-amber-50 to-orange-100 rounded-2xl p-4 flex items-center justify-center overflow-hidden mb-4 border-2 border-amber-100 group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/Banjo.png" alt="Banjo" class="max-h-full max-w-full object-contain drop-shadow-md">
+        </div>
+        <div class="w-full">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-heading font-bold bg-amber-100 text-amber-800 uppercase tracking-wider">Musical Joy</span>
+          <h3 class="font-heading font-bold text-xl text-slate-800 mt-1">Banjo</h3>
+          <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">
+            The cheerful little musician who strums peaceful tunes and guides babies into sweet dreamland.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. Benny -->
+      <div class="bg-white rounded-3xl p-5 border-4 border-sky-200 shadow-card-pop hover:border-sky-400 hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+        <div class="w-full aspect-square bg-gradient-to-tr from-sky-50 to-blue-100 rounded-2xl p-4 flex items-center justify-center overflow-hidden mb-4 border-2 border-sky-100 group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/Benny.png" alt="Benny" class="max-h-full max-w-full object-contain drop-shadow-md">
+        </div>
+        <div class="w-full">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-heading font-bold bg-sky-100 text-sky-800 uppercase tracking-wider">Playful &amp; Brave</span>
+          <h3 class="font-heading font-bold text-xl text-slate-800 mt-1">Benny</h3>
+          <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">
+            Full of cute curiosity! Benny loves daytime adventures and curling up with a soft blanket at night.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Jennie -->
+      <div class="bg-white rounded-3xl p-5 border-4 border-pink-200 shadow-card-pop hover:border-pink-400 hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+        <div class="w-full aspect-square bg-gradient-to-tr from-pink-50 to-rose-100 rounded-2xl p-4 flex items-center justify-center overflow-hidden mb-4 border-2 border-pink-100 group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/Jennie.png" alt="Jennie" class="max-h-full max-w-full object-contain drop-shadow-md">
+        </div>
+        <div class="w-full">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-heading font-bold bg-pink-100 text-pink-800 uppercase tracking-wider">Sweet Heart</span>
+          <h3 class="font-heading font-bold text-xl text-slate-800 mt-1">Jennie</h3>
+          <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">
+            Gentle, caring, and loves singing soft whispers that ease crying toddlers into relaxed smiles.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. Lolo -->
+      <div class="bg-white rounded-3xl p-5 border-4 border-purple-200 shadow-card-pop hover:border-purple-400 hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+        <div class="w-full aspect-square bg-gradient-to-tr from-purple-50 to-indigo-100 rounded-2xl p-4 flex items-center justify-center overflow-hidden mb-4 border-2 border-purple-100 group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/Lolo.png" alt="Lolo" class="max-h-full max-w-full object-contain drop-shadow-md">
+        </div>
+        <div class="w-full">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-heading font-bold bg-purple-100 text-purple-800 uppercase tracking-wider">Dreamy Bear</span>
+          <h3 class="font-heading font-bold text-xl text-slate-800 mt-1">Lolo</h3>
+          <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">
+            The master of sleepy yawns! Whenever Lolo hugs his pillow, everybody around feels cozy and warm.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5. Rexy -->
+      <div class="bg-white rounded-3xl p-5 border-4 border-emerald-200 shadow-card-pop hover:border-emerald-400 hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+        <div class="w-full aspect-square bg-gradient-to-tr from-emerald-50 to-teal-100 rounded-2xl p-4 flex items-center justify-center overflow-hidden mb-4 border-2 border-emerald-100 group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/Rexy.png" alt="Rexy" class="max-h-full max-w-full object-contain drop-shadow-md">
+        </div>
+        <div class="w-full">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-heading font-bold bg-emerald-100 text-emerald-800 uppercase tracking-wider">Gentle Dino</span>
+          <h3 class="font-heading font-bold text-xl text-slate-800 mt-1">Rexy</h3>
+          <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">
+            A friendly little dino protector who watches over babies so they feel safe and sound in their cribs.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6. Sunny -->
+      <div class="bg-white rounded-3xl p-5 border-4 border-yellow-200 shadow-card-pop hover:border-yellow-400 hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+        <div class="w-full aspect-square bg-gradient-to-tr from-yellow-50 to-amber-100 rounded-2xl p-4 flex items-center justify-center overflow-hidden mb-4 border-2 border-yellow-100 group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/Sunny.jpeg" alt="Sunny" class="max-h-full max-w-full object-contain rounded-xl drop-shadow-md">
+        </div>
+        <div class="w-full">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-heading font-bold bg-yellow-100 text-yellow-800 uppercase tracking-wider">Warm Sunshine</span>
+          <h3 class="font-heading font-bold text-xl text-slate-800 mt-1">Sunny</h3>
+          <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">
+            Brings bright morning smiles after a restful full night of sleep, ready for a new fun day!
+          </p>
+        </div>
+      </div>
+
+      <!-- 7. Peaches -->
+      <div class="bg-white rounded-3xl p-5 border-4 border-rose-200 shadow-card-pop hover:border-rose-400 hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group">
+        <div class="w-full aspect-square bg-gradient-to-tr from-orange-50 to-rose-100 rounded-2xl p-4 flex items-center justify-center overflow-hidden mb-4 border-2 border-rose-100 group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/Peaches.jpeg" alt="Peaches" class="max-h-full max-w-full object-contain rounded-xl drop-shadow-md">
+        </div>
+        <div class="w-full">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-heading font-bold bg-rose-100 text-rose-800 uppercase tracking-wider">Cute &amp; Soft</span>
+          <h3 class="font-heading font-bold text-xl text-slate-800 mt-1">Peaches</h3>
+          <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">
+            The sweetest companion with adorable giggles, loving lullaby stories, and cozy bedtime cuddles.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BEDTIME LULLABIES & MUSIC HIGHLIGHTS -->
+  <section id="music" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+    <div class="bg-white border-4 border-amber-200 rounded-[32px] p-8 sm:p-12 shadow-card-pop relative overflow-hidden">
+      <div class="absolute -right-8 -bottom-8 w-40 h-40 bg-amber-100 rounded-full blur-2xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+          <span class="px-3.5 py-1 rounded-full bg-orange-100 text-orange-700 font-heading font-bold text-xs border border-orange-300 inline-block">
+            🎵 Soothing Soundscapes
+          </span>
+          <h2 class="font-heading font-black text-2xl sm:text-4xl text-slate-800 leading-tight">
+            Gentle Acoustic Piano Lullabies for Restful Baby Sleep
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 font-medium leading-relaxed">
+            Every track is lovingly composed with warm, gentle piano melodies and soft music box notes. Pure, peaceful, and comforting sounds designed to soothe fussy babies, quiet busy little minds, and help your little one fall asleep naturally without tears.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-3 justify-center lg:justify-start">
+            <span class="px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <span>🎹</span> Gentle Acoustic Piano
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <span>💤</span> 100% Royalty Free
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <span>🍼</span> Peaceful Bedtime Routine
+            </span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col items-center justify-center p-6 bg-gradient-to-tr from-amber-50 to-orange-50 rounded-3xl border-2 border-dashed border-amber-300 text-center space-y-4">
+          <div class="w-16 h-16 rounded-full bg-orange-500 text-white flex items-center justify-center text-3xl shadow-lg animate-pulse-glow">
+            ▶
+          </div>
+          <div>
+            <h4 class="font-heading font-bold text-lg text-slate-800">Explore Our Sleep Collection</h4>
+            <p class="text-xs text-slate-500 mt-1">Discover a rich variety of calming acoustic melodies, gentle bedtime arrangements, and relaxing video playlists on YouTube.</p>
+          </div>
+          <a href="https://www.youtube.com/@OrangeBerriesTV" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-heading font-bold text-xs sm:text-sm shadow-btn-pop transition-all">
+            Listen on YouTube Channel ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ORANGE BERRIES TV -->
+  <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 scroll-mt-20">
+    <div class="bg-gradient-to-br from-amber-50 via-orange-50 to-sky-50 border-4 border-amber-300 rounded-[32px] p-8 sm:p-12 shadow-card-pop space-y-6 relative overflow-hidden">
+      
+      <!-- Decorative Background Circles -->
+      <div class="absolute -right-12 -top-12 w-48 h-48 bg-orange-200/40 rounded-full blur-2xl pointer-events-none"></div>
+      <div class="absolute -left-12 -bottom-12 w-48 h-48 bg-sky-200/40 rounded-full blur-2xl pointer-events-none"></div>
+
+      <div class="flex items-center gap-3 relative z-10">
+        <span class="px-3.5 py-1 rounded-full bg-white text-orange-700 font-heading font-bold text-xs uppercase tracking-wider border-2 border-orange-300 shadow-xs flex items-center gap-1.5">
+          <span>✨</span> About Our Studio
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative z-10">
+        <div class="md:col-span-7 space-y-3">
+          <h2 class="font-heading font-black text-2xl sm:text-3xl text-slate-800">
+            About Orange Berries TV
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+            <strong class="text-orange-600 font-bold">Orange Berries TV</strong> is a dedicated children’s media and bedtime entertainment studio. We believe that bedtime should be a cherished, calm, and soothing experience for every family.
+          </p>
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+            Through gentle animated characters, warm visual journeys, and lovingly arranged acoustic piano lullabies, we aim to create a comforting world where babies and toddlers feel safe, peaceful, and ready for sweet dreams every night.
+          </p>
+        </div>
+
+        <div class="md:col-span-5 p-6 rounded-3xl bg-white border-2 border-amber-200 shadow-md space-y-2.5 text-xs text-slate-600 font-medium">
+          <div class="font-heading font-bold text-sm mb-2 text-orange-600 flex items-center gap-1.5 border-b border-amber-100 pb-2">
+            <span>🍊</span> Orange Berries TV Details
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-slate-100">
+            <span class="text-slate-500">Channel / Brand:</span>
+            <strong class="text-slate-800 font-bold">Orange Berries TV</strong>
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-slate-100">
+            <span class="text-slate-500">YouTube Channel:</span>
+            <a href="https://www.youtube.com/@OrangeBerriesTV" target="_blank" class="text-rose-600 font-bold hover:underline">@OrangeBerriesTV</a>
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-slate-100">
+            <span class="text-slate-500">Pinterest Account:</span>
+            <a href="https://www.pinterest.com/orangeberriestv/" target="_blank" class="text-red-600 font-bold hover:underline">@orangeberriestv</a>
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-slate-100">
+            <span class="text-slate-500">Instagram:</span>
+            <a href="https://www.instagram.com/orangeberriestv/" target="_blank" class="text-pink-600 font-bold hover:underline">@orangeberriestv</a>
+          </div>
+          <div class="flex items-center justify-between py-1">
+            <span class="text-slate-500">Contact Email:</span>
+            <span class="text-slate-800 font-bold font-mono text-[11px]">orangeberriestv@gmail.com</span>
+          </div>
+          <div class="pt-3">
+            <a href="privacy.html" class="w-full py-2 px-3 rounded-xl bg-orange-100 hover:bg-orange-200 text-orange-700 font-heading font-bold text-xs flex items-center justify-center gap-1.5 transition-colors border border-orange-300">
+              <span>📜</span> Read Official Privacy Policy &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CUTE & WARM FOOTER -->
+  <footer class="mt-16 bg-white border-t-4 border-amber-200 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      
+      <!-- Brand & Copyright -->
+      <div class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="Orange Berries TV" class="w-10 h-10 rounded-full border-2 border-orange-400 object-cover">
+        <div>
+          <div class="font-heading font-bold text-base text-slate-800">Orange Berries TV</div>
+          <div class="text-xs text-slate-500 font-medium">© 2026 Orange Berries TV. All Rights Reserved.</div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex flex-wrap items-center justify-center gap-6 font-heading font-semibold text-xs sm:text-sm text-slate-600">
+        <a href="#about" class="hover:text-orange-500 transition-colors">About Us</a>
+        <a href="#characters" class="hover:text-orange-500 transition-colors">Meet Our Friends</a>
+        <a href="#music" class="hover:text-orange-500 transition-colors">Sleep Music</a>
+        <a href="privacy.html" class="text-orange-600 font-bold hover:underline">Privacy Policy</a>
+      </div>
+
+      <!-- Social Icons Mini -->
+      <div class="flex items-center gap-3">
+        <a href="https://www.youtube.com/@OrangeBerriesTV" target="_blank" class="w-8 h-8 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center hover:scale-110 transition-transform shadow-xs" title="YouTube">▶</a>
+        <a href="https://www.instagram.com/orangeberriestv/" target="_blank" class="w-8 h-8 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center hover:scale-110 transition-transform shadow-xs" title="Instagram">📷</a>
+        <a href="https://www.pinterest.com/orangeberriestv/" target="_blank" class="w-8 h-8 rounded-full bg-red-50 text-red-600 flex items-center justify-center hover:scale-110 transition-transform shadow-xs" title="Pinterest">📌</a>
+        <a href="https://web.facebook.com/orangeberriestv" target="_blank" class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center hover:scale-110 transition-transform shadow-xs" title="Facebook">📘</a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
